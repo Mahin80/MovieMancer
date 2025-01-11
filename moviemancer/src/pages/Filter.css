@@ -1,0 +1,142 @@
+/* Filter Page Styles */
+.filter body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Sets the entire page background to black */
+    font-family: 'Quantico'; /* Ensures a clean font is applied globally */
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    min-height: 95vh; /* Ensures it covers the entire viewport height */
+    background-color: black; /* Ensures the page container also matches the black background */
+    font-family: 'Quantico';
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    background-color: black;
+    color: white;
+}
+
+.form-container {
+    background-color: #6A0000; /* Matches the deep red background */
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px; /* Increased width to better match the layout */
+    text-align: center;
+}
+
+.form-container h2, .form-container h3 {
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Qunatico'; /* Use a bold and clean font */
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Spacing between genres for better readability */
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.genres span {
+    background-color: black; /* Black background for contrast */
+    color: white;
+    padding: 5px 15px; /* Increased padding for a bolder appearance */
+    border-radius: 5px;
+    font-size: 14px;
+    font-family:'arial';
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.genres span:hover {
+    background-color: white; /* Add hover effect for interactivity */
+    color: black;
+}
+
+.form-container input {
+    width: 40%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-Family:'Quantico';
+    background-color: #D9D9D9;
+    text-align: center;
+}
+
+.form-container button {
+    width: 20%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: black;
+    color: white;
+}
+
+.datepicker-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* Flexbox Layout for Year Range Inputs */
+.year-range {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Add some space between the two inputs */
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.year-range .datepicker-input {
+    width: 48%; /* Set each year input to take up about half the width */
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .genre-bubble {
+    padding: 8px 16px;
+    background-color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .genre-bubble.selected {
+    background-color: white; /* Green color for selected genre */
+    color: black;
+  }
+  
+  .genre-bubble:hover {
+    background-color: #a0a0a0;
+  }
+  
