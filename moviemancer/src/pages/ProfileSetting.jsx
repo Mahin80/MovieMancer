@@ -4,9 +4,7 @@ import "./ProfileSetting.css";
 const ProfileSettings = () => {
   return (
     <div className="page-container">
-      <header className="header">
-        <h1>MovieMancer</h1>
-      </header>
+   
       <div className="form-container">
         <h2>Profile Settings</h2>
         <form>

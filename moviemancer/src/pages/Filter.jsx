@@ -1,24 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Filter.css";
 
 const FilterPage = () => {
-  const [startYear, setStartYear] = useState(null); // State for start year
-  const [endYear, setEndYear] = useState(null); // State for end year
-  const [selectedGenres, setSelectedGenres] = useState([]); // State to track selected genres
-
-  // Get the current year
-  const currentYear = new Date().getFullYear();
-
-  // Handle genre selection
-  const handleGenreChange = (genre) => {
-    if (selectedGenres.includes(genre)) {
-      setSelectedGenres(selectedGenres.filter(item => item !== genre)); // Remove genre if already selected
-    } else {
-      setSelectedGenres([...selectedGenres, genre]); // Add genre if not selected
-    }
-  };
+  const navigate = useNavigate();
+  const [startYear, setStartYear] = useState(null);
+  const [endYear, setEndYear] = useState(null);
+  const [selectedGenres, setSelectedGenres] = useState([]);
+  const [imdbScore, setImdbScore] = useState("");
 
   const genres = [
     "Action", "Adventure", "Animation", "Biography", "Comedy", "Crime",
@@ -27,11 +18,34 @@ const FilterPage = () => {
     "Thriller", "War", "Western"
   ];
 
+  // Handle genre selection
+  const handleGenreChange = (genre) => {
+    setSelectedGenres(prev =>
+      prev.includes(genre) ? prev.filter(g => g !== genre) : [...prev, genre]
+    );
+  };
+
+  // Apply Filters
+  const applyFilters = (e) => {
+    e.preventDefault();
+
+    const filters = {
+      genres: selectedGenres.join(","), // Convert array to string for URL
+      startYear: startYear ? startYear.getFullYear() : "",
+      endYear: endYear ? endYear.getFullYear() : "",
+      imdbScore: imdbScore
+    };
+
+    // Navigate to Recommendations page with filters in URL
+    navigate(`/Recommendation?${new URLSearchParams(filters).toString()}`);
+  };
+
   return (
     <div className="page-container">
       <div className="form-container">
-        <h2 style={{ fontFamily: "Quantico" }}>Profile</h2>
-        <h3 style={{ fontFamily: "Quantico" }}>Genres</h3>
+        <h2>Filter Movies</h2>
+        
+        <h3>Genres</h3>
         <div className="genres">
           {genres.map((genre) => (
             <div
@@ -43,36 +57,35 @@ const FilterPage = () => {
             </div>
           ))}
         </div>
-        <form>
-          {/* Year Range Picker */}
+
+        <form onSubmit={applyFilters}>
           <div className="year-range">
-            {/* Start Year Picker */}
             <DatePicker
               selected={startYear}
-              onChange={(date) => setStartYear(date)}
+              onChange={setStartYear}
               showYearPicker
               dateFormat="yyyy"
-              placeholderText="Select Start Year"
-              minDate={new Date("1900-01-01")}
-              maxDate={new Date(`${currentYear}-12-31`)} // max is the current year
+              placeholderText="Start Year"
               className="datepicker-input"
             />
-            {/* End Year Picker */}
             <DatePicker
               selected={endYear}
-              onChange={(date) => setEndYear(date)}
+              onChange={setEndYear}
               showYearPicker
               dateFormat="yyyy"
-              placeholderText="Select End Year"
-              minDate={new Date("1900-01-01")}
-              maxDate={new Date(`${currentYear}-12-31`)} // max is the current year
+              placeholderText="End Year"
               className="datepicker-input"
             />
           </div>
-          <input type="text" placeholder="IMDB Score" />
-          <br />
-          <br />
-          <button type="submit">Save</button>
+
+          <input 
+            type="text" 
+            placeholder="IMDb Score" 
+            value={imdbScore} 
+            onChange={(e) => setImdbScore(e.target.value)} 
+          />
+
+          <button type="submit">Apply Filters</button>
         </form>
       </div>
     </div>

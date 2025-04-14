@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     padding: 20px;
-    background: linear-gradient(to bottom right, black, #6A0000);
+    background:  black;
     display: flex;
     justify-content: center;
     align-items: center;

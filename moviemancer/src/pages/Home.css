@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  
     padding: 20px;
     box-sizing: border-box;
   }
@@ -13,6 +14,9 @@
   .home-page h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    animation: flicker 2s infinite; /*animation*/
+    display: inline-block;
+    position: relative; /* Needed for glitter positioning */
   }
   
   .home-page p {
@@ -43,6 +47,34 @@
     background: lightgray;
   }
   
+  .home-page h2 .glitter {
+    position: absolute;
+    top: 50%; /* Start near the wand icon */
+    left: 100%; /* Position just after the wand icon */
+    width: 8px;
+    height: 8px;
+    background-color: #ffeb3b; /* Gold color for glitter */
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px #ffeb3b;
+    animation: glitter-animation 1.5s infinite ease-out;
+  }
+  
+  /* Glitter animation */
+  @keyframes glitter-animation {
+    0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5) translate(20px, -20px);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(0) translate(40px, -40px);
+      opacity: 0;
+    }
+  }
+  
   @media (max-width: 768px) {
     .home-page h2 {
       font-size: 2rem;
@@ -57,4 +89,14 @@
       padding: 8px 15px;
     }
   }
+
+  /* Flicker animation */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0;
+  }
+}
   
