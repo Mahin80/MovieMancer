@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>MovieMancer - README</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      margin: 40px;
-      max-width: 800px;
-      color: #333;
-    }
-    h1, h2 {
-      color: #222;
-    }
-    code {
-      background-color: #f4f4f4;
-      padding: 2px 5px;
-      border-radius: 4px;
-    }
-    pre {
-      background-color: #f4f4f4;
-      padding: 15px;
-      border-radius: 6px;
-      overflow-x: auto;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    ul {
-      margin-left: 20px;
-    }
-  </style>
-</head>
+
 <body>
 
   <h1>🎬 MovieMancer</h1>
@@ -94,11 +59,7 @@ cd moviemancer</code></pre>
   <h2>📄 License</h2>
   <p>This project is licensed under the MIT License. See the <a href="./LICENSE">LICENSE</a> file for details.</p>
 
-  <h2>💬 Feedback</h2>
-  <p>Found a bug or have a feature request?<br>
-  <a href="https://github.com/your-username/moviemancer/issues" target="_blank">Open an issue</a> or submit a pull request!</p>
-
-  <p><em>Made with 💙 by [Your Name]</em></p>
+ 
 
 </body>
-</html>
+
