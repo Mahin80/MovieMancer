@@ -23,11 +23,11 @@ function ContactUs() {
   };
 
   const headerStyle = {
-    backgroundColor: '#d32f2f',
+  
     color: 'white',
     textAlign: 'center',
     padding: '15px 0',
-    marginBottom: '30px',
+    marginBottom: '0px',
     marginTop: '30px',
   };
 
@@ -41,7 +41,7 @@ function ContactUs() {
   const contactInfoStyle = {
     fontSize: '1.2rem',
     textAlign: 'center',
-    marginBottom: '40px',
+    marginBottom: '10px',
   };
 
   const contactInfoTextStyle = {
@@ -50,7 +50,7 @@ function ContactUs() {
 
   const feedbackSectionStyle = {
     maxWidth: '600px',
-    margin: '20px auto',
+    margin: '8px auto',
     backgroundColor: '#222',
     padding: '50px',
     borderRadius: '8px',
@@ -78,11 +78,11 @@ function ContactUs() {
   };
 
   const inputStyle = {
-    width: '80%',
+    width: '90%',
     padding: '10px',
     marginTop: '5px',
     backgroundColor: '#333',
-    border: '1px solid #f44336',
+    border: '1px solid white',
     borderRadius: '5px',
     color: 'white',
   };
@@ -94,7 +94,7 @@ function ContactUs() {
     padding: '10px',
     marginTop: '5px',
     backgroundColor: '#333',
-    border: '1px solid #f44336',
+    border: '1px solid white',
     borderRadius: '5px',
     color: 'white',
   };
