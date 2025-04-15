@@ -64,7 +64,7 @@
 }
 
 .form-container input {
-    width: 30%;
+    width: 40%;
     padding: 10px;
     margin: 10px 0;
     border: none;
@@ -113,7 +113,7 @@
 }
 
 .year-range .datepicker-input {
-    width: 69%; /* Set each year input to take up about half the width */
+    width: 48%; /* Set each year input to take up about half the width */
 }
 
 .genres {
@@ -139,4 +139,64 @@
   .genre-bubble:hover {
     background-color: #a0a0a0;
   }
+
+  .genre-bubble {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    border: 2px solid #555;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .genre-bubble.selected {
+    background-color: #ff5733;
+    color: white;
+    border-color: #ff5733;
+  }
+  
+  .datepicker-input {
+    margin: 10px 5px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="text"] {
+    padding: 8px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-buttons {
+    width: 60%;
+    display: flex;
+    justify-content:center ;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 8px 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .reset-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
   
