@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 import "./Recommendation.css";
 
-const TMDB_API_KEY = "7772a197ab7028bd72e8575e4dd78c85";
+const TMDB_API_KEY = "";
 
 // Genre ID to Name map
 const genreNameMap = {
