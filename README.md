@@ -43,10 +43,13 @@ cd moviemancer</code></pre>
 
   <h2>✨ Upcoming Features</h2>
   <ul>
-    <li>🎯 Save to Watchlist</li>
-    <li>🌙 Light/Dark Mode</li>
-    <li>🔍 Search by Movie Title</li>
-    <li>📂 Genre-based Pagination</li>
+     <li>🔐 User authentication (create account, login/logout)</li>
+    <li>❤️ Personalized movie list based on saved preferences</li>
+    <li>📄 Save filters to user profile (not just cookies)</li>
+    <li>✅ Watched list – mark movies as watched and view history</li>
+    <li>🎯 Save to Watchlist functionality</li>
+    <li>🌙 Light/Dark Mode toggle</li>
+    <li>🔍 Movie title search bar</li>
   </ul>
 
   <h2>🙌 Acknowledgements</h2>
