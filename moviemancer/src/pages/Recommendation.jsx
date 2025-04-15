@@ -5,7 +5,7 @@ import "./Recommendation.css";
 
 const TMDB_API_KEY = "7772a197ab7028bd72e8575e4dd78c85";
 
-// ✅ Genre ID to Name map
+// Genre ID to Name map
 const genreNameMap = {
   28: "Action", 12: "Adventure", 16: "Animation", 35: "Comedy",
   80: "Crime", 99: "Documentary", 18: "Drama", 10751: "Family",
@@ -152,7 +152,7 @@ function RecommendationsPage() {
             <div className="trailer">
               <h4>Trailer</h4>
               <iframe
-                width="50%"
+                width="90%"
                 height="500"
                 src={trailer}
                 title="YouTube Trailer"
@@ -165,8 +165,8 @@ function RecommendationsPage() {
 
           <button
             onClick={fetchMovie}
-            style={{ marginTop: "45px", width: "25%", marginBottom: "25px" }}
-          >
+            className="recommend-button"
+            >
             Recommend Another
           </button>
         </div>

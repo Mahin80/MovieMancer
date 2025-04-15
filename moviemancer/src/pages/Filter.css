@@ -121,6 +121,7 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
+    font-family: 'Quantico', sans-serif;
   }
   
   .genre-bubble {
@@ -129,6 +130,7 @@
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: 'Quantico', sans-serif;
   }
   
   .genre-bubble.selected {
@@ -153,9 +155,9 @@
   }
   
   .genre-bubble.selected {
-    background-color: #ff5733;
+    background-color: black;
     color: white;
-    border-color: #ff5733;
+   
   }
   
   .datepicker-input {
@@ -190,7 +192,7 @@
   }
   
   button[type="submit"] {
-    background-color: #28a745;
+    background-color: black;
     color: white;
   }
   

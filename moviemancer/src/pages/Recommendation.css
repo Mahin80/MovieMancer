@@ -19,6 +19,8 @@
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+  max-width: 60%; /* Adjust the width as needed */
+  margin: 0 auto; 
 }
 
 .movie-card img {
@@ -64,9 +66,7 @@
   border-radius: 5px;
 }
 
-.trailer {
-  margin-top: 20px;
-}
+
 .movie-card button {
   padding: 8px 16px;
   font-weight: bold;
@@ -80,23 +80,29 @@
   background-color: #e04e2a;
 }
 
-
 .trailer {
   margin-top: 20px;
+  width: 100%; /* Make it responsive to the screen size */
+  max-width: 1000px; /* Slightly expand the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
 }
 
 .movie-card button {
   padding: 8px 16px;
   font-weight: bold;
-  background-color: #ff5733;
+  background-color: black;
   color: white;
+
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .movie-card button:hover {
-  background-color: #e04e2a;
+  background-color: white;
+  color: black;
 }
 
 .cast-section {
@@ -140,5 +146,125 @@
 
   .movie-info {
     width: 90%;
+  }
+}
+
+
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 1024px) {
+  .cast-card {
+    width: 100px; /* Slightly smaller width for medium screens */
+  }
+
+  .cast-card p {
+    font-size: 13px; /* Adjust font size */
+  }
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .recommendations-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-info {
+    width: 90%; /* Full width for smaller screens */
+  }
+
+  .cast-grid {
+    gap: 10px; /* Reduce gap for smaller screens */
+  }
+
+  .cast-card {
+    width: 80px; /* Smaller width for small screens */
+  }
+
+  .cast-card p {
+    font-size: 12px; /* Adjust font size for readability */
+  }
+}
+
+/* Responsive adjustments for extra small screens */
+@media (max-width: 480px) {
+  .cast-card {
+    width: 70px; 
+  }
+
+  .cast-card p {
+    font-size: 11px; 
+  }
+}
+
+
+.trailer {
+  margin-top: 20px;
+  width: 100%; /* Full width for responsiveness */
+  max-width: 1000px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the entire trailer fits within the container */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 1024px) {
+  .trailer {
+    max-width: 800px; /* Adjust maximum width for medium screens */
+  }
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .trailer {
+    max-width: 600px; /* Adjust maximum width for small screens */
+  }
+}
+
+/* Responsive adjustments for extra small screens */
+@media (max-width: 480px) {
+  .trailer {
+    width: 100%; /* Use full width for extra small screens */
+    max-width: none;
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+.recommend-button {
+  margin-top: 29px;
+  margin-bottom: 20px;
+  width: 25%; /* Default width */
+  padding: 10px 20px;
+  font-size: 16px;
+
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .recommend-button {
+    width: 35%; 
+    font-size: 14px; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .recommend-button {
+    width: 50%;
+    font-size: 12px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .recommend-button {
+    width: 70%; 
+    font-size: 12px; 
   }
 }
